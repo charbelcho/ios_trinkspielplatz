@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD3669532779F6DF001DAD9B /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3669522779F6DF001DAD9B /* BannerAd.swift */; };
+		DD5086FA2A03CCB400CFB8B0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */; };
+		DD5086FC2A03CEBB00CFB8B0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5086FB2A03CEBB00CFB8B0 /* Card.swift */; };
+		DD5086FE2A03CEEB00CFB8B0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5086FD2A03CEEB00CFB8B0 /* Utils.swift */; };
+		DD5087002A03CF1600CFB8B0 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5086FF2A03CF1600CFB8B0 /* SocketService.swift */; };
+		DD5087022A04060300CFB8B0 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087012A04060300CFB8B0 /* BannerAdView.swift */; };
+		DD5087042A0406EA00CFB8B0 /* HoeherTieferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087032A0406EA00CFB8B0 /* HoeherTieferView.swift */; };
+		DD5087062A04070E00CFB8B0 /* ShitheadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087052A04070E00CFB8B0 /* ShitheadView.swift */; };
+		DD5087082A04073700CFB8B0 /* WerBinIchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087072A04073700CFB8B0 /* WerBinIchView.swift */; };
+		DD50870A2A04079E00CFB8B0 /* PferderennenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087092A04079E00CFB8B0 /* PferderennenView.swift */; };
+		DD50871B2A04096300CFB8B0 /* WerbinichData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50870D2A04096300CFB8B0 /* WerbinichData.swift */; };
+		DD50871C2A04096300CFB8B0 /* StartModalPferderennenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50870E2A04096300CFB8B0 /* StartModalPferderennenView.swift */; };
+		DD50871D2A04096300CFB8B0 /* VerliererModalBangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50870F2A04096300CFB8B0 /* VerliererModalBangView.swift */; };
+		DD50871E2A04096300CFB8B0 /* KartenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087102A04096300CFB8B0 /* KartenView.swift */; };
+		DD50871F2A04096300CFB8B0 /* KingsCupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087112A04096300CFB8B0 /* KingsCupView.swift */; };
+		DD5087202A04096300CFB8B0 /* ZuFruehModalBangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087122A04096300CFB8B0 /* ZuFruehModalBangView.swift */; };
+		DD5087212A04096300CFB8B0 /* MaexchenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087132A04096300CFB8B0 /* MaexchenView.swift */; };
+		DD5087222A04096300CFB8B0 /* BangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087142A04096300CFB8B0 /* BangView.swift */; };
+		DD5087232A04096300CFB8B0 /* StartModalEinhundertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087152A04096300CFB8B0 /* StartModalEinhundertView.swift */; };
+		DD5087242A04096300CFB8B0 /* BusfahrerPhase2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087162A04096300CFB8B0 /* BusfahrerPhase2View.swift */; };
+		DD5087252A04096300CFB8B0 /* EinhundertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087172A04096300CFB8B0 /* EinhundertView.swift */; };
+		DD5087262A04096300CFB8B0 /* BusfahrerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087182A04096300CFB8B0 /* BusfahrerView.swift */; };
+		DD5087272A04096300CFB8B0 /* WuerfelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087192A04096300CFB8B0 /* WuerfelView.swift */; };
+		DD5087282A04096300CFB8B0 /* BusfahrerPhase3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50871A2A04096300CFB8B0 /* BusfahrerPhase3View.swift */; };
+		DD50872B2A040A6100CFB8B0 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = DD50872A2A040A6100CFB8B0 /* SocketIO */; };
+		DD50872E2A040A7B00CFB8B0 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = DD50872D2A040A7B00CFB8B0 /* SimpleToast */; };
+		DD5087312A040BF400CFB8B0 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DD5087302A040BF400CFB8B0 /* GoogleMobileAds */; };
+		DD8C779B277BB89800B6E89F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD8C779A277BB89800B6E89F /* GoogleService-Info.plist */; };
+		DDB8EC0927728CDD006831F4 /* trinkspielplatzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC0827728CDD006831F4 /* trinkspielplatzApp.swift */; };
+		DDB8EC0B27728CDD006831F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC0A27728CDD006831F4 /* HomeView.swift */; };
+		DDB8EC0D27728CE0006831F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC0C27728CE0006831F4 /* Assets.xcassets */; };
+		DDB8EC1027728CE0006831F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC0F27728CE0006831F4 /* Preview Assets.xcassets */; };
+		DDB8EC1B27728F8C006831F4 /* NochnieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC1627728F8C006831F4 /* NochnieView.swift */; };
+		DDB8EC1C27728F8C006831F4 /* IchhabnochnieJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */; };
+		DDB8EC1D27728F8C006831F4 /* NavBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC1827728F8C006831F4 /* NavBarModifier.swift */; };
+		DDB8EC1E27728F8C006831F4 /* NochnieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC1927728F8C006831F4 /* NochnieData.swift */; };
+		DDB8EC2A277290AA006831F4 /* PflichtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC22277290AA006831F4 /* PflichtData.swift */; };
+		DDB8EC2C277290AA006831F4 /* WahrheitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC24277290AA006831F4 /* WahrheitData.swift */; };
+		DDB8EC2D277290AA006831F4 /* PflichtJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC25277290AA006831F4 /* PflichtJSON.json */; };
+		DDB8EC2E277290AA006831F4 /* WahrheitPflichtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC26277290AA006831F4 /* WahrheitPflichtView.swift */; };
+		DDB8EC2F277290AA006831F4 /* WahrheitJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC27277290AA006831F4 /* WahrheitJSON.json */; };
+		DDB8EC35277293D0006831F4 /* EherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC31277293D0006831F4 /* EherData.swift */; };
+		DDB8EC36277293D0006831F4 /* WerWuerdeEherJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */; };
+		DDB8EC37277293D0006831F4 /* EherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC33277293D0006831F4 /* EherView.swift */; };
+		DDD2BB51277A26FD00554FE5 /* AnleitungenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD2BB50277A26FD00554FE5 /* AnleitungenView.swift */; };
+		F171DC529056B2C6F79B7457 /* Pods_trinkspielplatz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE869827533D904E64CDACC /* Pods_trinkspielplatz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AE94D390DEC9FA17A6221F4 /* Pods-trinkspielplatz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trinkspielplatz.release.xcconfig"; path = "Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz.release.xcconfig"; sourceTree = "<group>"; };
+		BFE869827533D904E64CDACC /* Pods_trinkspielplatz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trinkspielplatz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3669522779F6DF001DAD9B /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		DD5086FB2A03CEBB00CFB8B0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DD5086FD2A03CEEB00CFB8B0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DD5086FF2A03CF1600CFB8B0 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		DD5087012A04060300CFB8B0 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		DD5087032A0406EA00CFB8B0 /* HoeherTieferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoeherTieferView.swift; sourceTree = "<group>"; };
+		DD5087052A04070E00CFB8B0 /* ShitheadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitheadView.swift; sourceTree = "<group>"; };
+		DD5087072A04073700CFB8B0 /* WerBinIchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerBinIchView.swift; sourceTree = "<group>"; };
+		DD5087092A04079E00CFB8B0 /* PferderennenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PferderennenView.swift; sourceTree = "<group>"; };
+		DD50870D2A04096300CFB8B0 /* WerbinichData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WerbinichData.swift; sourceTree = "<group>"; };
+		DD50870E2A04096300CFB8B0 /* StartModalPferderennenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModalPferderennenView.swift; sourceTree = "<group>"; };
+		DD50870F2A04096300CFB8B0 /* VerliererModalBangView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerliererModalBangView.swift; sourceTree = "<group>"; };
+		DD5087102A04096300CFB8B0 /* KartenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KartenView.swift; sourceTree = "<group>"; };
+		DD5087112A04096300CFB8B0 /* KingsCupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingsCupView.swift; sourceTree = "<group>"; };
+		DD5087122A04096300CFB8B0 /* ZuFruehModalBangView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZuFruehModalBangView.swift; sourceTree = "<group>"; };
+		DD5087132A04096300CFB8B0 /* MaexchenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaexchenView.swift; sourceTree = "<group>"; };
+		DD5087142A04096300CFB8B0 /* BangView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangView.swift; sourceTree = "<group>"; };
+		DD5087152A04096300CFB8B0 /* StartModalEinhundertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModalEinhundertView.swift; sourceTree = "<group>"; };
+		DD5087162A04096300CFB8B0 /* BusfahrerPhase2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusfahrerPhase2View.swift; sourceTree = "<group>"; };
+		DD5087172A04096300CFB8B0 /* EinhundertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EinhundertView.swift; sourceTree = "<group>"; };
+		DD5087182A04096300CFB8B0 /* BusfahrerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusfahrerView.swift; sourceTree = "<group>"; };
+		DD5087192A04096300CFB8B0 /* WuerfelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WuerfelView.swift; sourceTree = "<group>"; };
+		DD50871A2A04096300CFB8B0 /* BusfahrerPhase3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusfahrerPhase3View.swift; sourceTree = "<group>"; };
+		DD8C779A277BB89800B6E89F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDB8EC0527728CDD006831F4 /* trinkspielplatz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trinkspielplatz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB8EC0827728CDD006831F4 /* trinkspielplatzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trinkspielplatzApp.swift; sourceTree = "<group>"; };
+		DDB8EC0A27728CDD006831F4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DDB8EC0C27728CE0006831F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDB8EC0F27728CE0006831F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDB8EC1627728F8C006831F4 /* NochnieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NochnieView.swift; sourceTree = "<group>"; };
+		DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IchhabnochnieJSON.json; sourceTree = "<group>"; };
+		DDB8EC1827728F8C006831F4 /* NavBarModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarModifier.swift; sourceTree = "<group>"; };
+		DDB8EC1927728F8C006831F4 /* NochnieData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NochnieData.swift; sourceTree = "<group>"; };
+		DDB8EC22277290AA006831F4 /* PflichtData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PflichtData.swift; sourceTree = "<group>"; };
+		DDB8EC24277290AA006831F4 /* WahrheitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WahrheitData.swift; sourceTree = "<group>"; };
+		DDB8EC25277290AA006831F4 /* PflichtJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = PflichtJSON.json; sourceTree = "<group>"; tabWidth = 2; };
+		DDB8EC26277290AA006831F4 /* WahrheitPflichtView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WahrheitPflichtView.swift; sourceTree = "<group>"; };
+		DDB8EC27277290AA006831F4 /* WahrheitJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WahrheitJSON.json; sourceTree = "<group>"; };
+		DDB8EC31277293D0006831F4 /* EherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EherData.swift; sourceTree = "<group>"; };
+		DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WerWuerdeEherJSON.json; sourceTree = "<group>"; };
+		DDB8EC33277293D0006831F4 /* EherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EherView.swift; sourceTree = "<group>"; };
+		DDB8EC3827729D34006831F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDD2BB50277A26FD00554FE5 /* AnleitungenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnleitungenView.swift; sourceTree = "<group>"; };
+		FB605505787CFB48A3F21D3F /* Pods-trinkspielplatz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trinkspielplatz.debug.xcconfig"; path = "Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDB8EC0227728CDD006831F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5087312A040BF400CFB8B0 /* GoogleMobileAds in Frameworks */,
+				F171DC529056B2C6F79B7457 /* Pods_trinkspielplatz.framework in Frameworks */,
+				DD50872E2A040A7B00CFB8B0 /* SimpleToast in Frameworks */,
+				DD50872B2A040A6100CFB8B0 /* SocketIO in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		809884DDE425C660C6CE550D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFE869827533D904E64CDACC /* Pods_trinkspielplatz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABF9FF9C5DC6B618971C6DA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB605505787CFB48A3F21D3F /* Pods-trinkspielplatz.debug.xcconfig */,
+				8AE94D390DEC9FA17A6221F4 /* Pods-trinkspielplatz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DDB8EBFC27728CDD006831F4 = {
+			isa = PBXGroup;
+			children = (
+				DDB8EC0727728CDD006831F4 /* trinkspielplatz */,
+				DDB8EC0627728CDD006831F4 /* Products */,
+				ABF9FF9C5DC6B618971C6DA2 /* Pods */,
+				809884DDE425C660C6CE550D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DDB8EC0627728CDD006831F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8EC0527728CDD006831F4 /* trinkspielplatz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDB8EC0727728CDD006831F4 /* trinkspielplatz */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8EC3827729D34006831F4 /* Info.plist */,
+				DD8C779A277BB89800B6E89F /* GoogleService-Info.plist */,
+				DDB8EC0827728CDD006831F4 /* trinkspielplatzApp.swift */,
+				DD3669522779F6DF001DAD9B /* BannerAd.swift */,
+				DD5087012A04060300CFB8B0 /* BannerAdView.swift */,
+				DD5086FB2A03CEBB00CFB8B0 /* Card.swift */,
+				DD5086FD2A03CEEB00CFB8B0 /* Utils.swift */,
+				DD5086FF2A03CF1600CFB8B0 /* SocketService.swift */,
+				DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */,
+				DDB8EC1827728F8C006831F4 /* NavBarModifier.swift */,
+				DDB8EC0A27728CDD006831F4 /* HomeView.swift */,
+				DDD2BB50277A26FD00554FE5 /* AnleitungenView.swift */,
+				DDB8EC1627728F8C006831F4 /* NochnieView.swift */,
+				DDB8EC33277293D0006831F4 /* EherView.swift */,
+				DDB8EC26277290AA006831F4 /* WahrheitPflichtView.swift */,
+				DD5087032A0406EA00CFB8B0 /* HoeherTieferView.swift */,
+				DD5087052A04070E00CFB8B0 /* ShitheadView.swift */,
+				DD5087072A04073700CFB8B0 /* WerBinIchView.swift */,
+				DD5087092A04079E00CFB8B0 /* PferderennenView.swift */,
+				DD5087142A04096300CFB8B0 /* BangView.swift */,
+				DD5087162A04096300CFB8B0 /* BusfahrerPhase2View.swift */,
+				DD50871A2A04096300CFB8B0 /* BusfahrerPhase3View.swift */,
+				DD5087182A04096300CFB8B0 /* BusfahrerView.swift */,
+				DD5087172A04096300CFB8B0 /* EinhundertView.swift */,
+				DD5087102A04096300CFB8B0 /* KartenView.swift */,
+				DD5087112A04096300CFB8B0 /* KingsCupView.swift */,
+				DD5087132A04096300CFB8B0 /* MaexchenView.swift */,
+				DD5087152A04096300CFB8B0 /* StartModalEinhundertView.swift */,
+				DD50870E2A04096300CFB8B0 /* StartModalPferderennenView.swift */,
+				DD50870F2A04096300CFB8B0 /* VerliererModalBangView.swift */,
+				DD50870D2A04096300CFB8B0 /* WerbinichData.swift */,
+				DD5087192A04096300CFB8B0 /* WuerfelView.swift */,
+				DD5087122A04096300CFB8B0 /* ZuFruehModalBangView.swift */,
+				DDB8EC31277293D0006831F4 /* EherData.swift */,
+				DDB8EC1927728F8C006831F4 /* NochnieData.swift */,
+				DDB8EC22277290AA006831F4 /* PflichtData.swift */,
+				DDB8EC24277290AA006831F4 /* WahrheitData.swift */,
+				DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */,
+				DDB8EC25277290AA006831F4 /* PflichtJSON.json */,
+				DDB8EC27277290AA006831F4 /* WahrheitJSON.json */,
+				DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */,
+				DDB8EC0C27728CE0006831F4 /* Assets.xcassets */,
+				DDB8EC0E27728CE0006831F4 /* Preview Content */,
+			);
+			path = trinkspielplatz;
+			sourceTree = "<group>";
+		};
+		DDB8EC0E27728CE0006831F4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8EC0F27728CE0006831F4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDB8EC0427728CDD006831F4 /* trinkspielplatz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDB8EC1327728CE0006831F4 /* Build configuration list for PBXNativeTarget "trinkspielplatz" */;
+			buildPhases = (
+				AD83B9BD44D9B48466F98A24 /* [CP] Check Pods Manifest.lock */,
+				DDB8EC0127728CDD006831F4 /* Sources */,
+				DDB8EC0227728CDD006831F4 /* Frameworks */,
+				DDB8EC0327728CDD006831F4 /* Resources */,
+				2A79F176480A6C61732FE623 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = trinkspielplatz;
+			packageProductDependencies = (
+				DD50872A2A040A6100CFB8B0 /* SocketIO */,
+				DD50872D2A040A7B00CFB8B0 /* SimpleToast */,
+				DD5087302A040BF400CFB8B0 /* GoogleMobileAds */,
+			);
+			productName = trinkspielplatz;
+			productReference = DDB8EC0527728CDD006831F4 /* trinkspielplatz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDB8EBFD27728CDD006831F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					DDB8EC0427728CDD006831F4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = DDB8EC0027728CDD006831F4 /* Build configuration list for PBXProject "trinkspielplatz" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDB8EBFC27728CDD006831F4;
+			packageReferences = (
+				DD5087292A040A6100CFB8B0 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+				DD50872C2A040A7B00CFB8B0 /* XCRemoteSwiftPackageReference "SimpleToast" */,
+				DD50872F2A040BF400CFB8B0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
+			productRefGroup = DDB8EC0627728CDD006831F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDB8EC0427728CDD006831F4 /* trinkspielplatz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDB8EC0327728CDD006831F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB8EC36277293D0006831F4 /* WerWuerdeEherJSON.json in Resources */,
+				DDB8EC2D277290AA006831F4 /* PflichtJSON.json in Resources */,
+				DDB8EC1027728CE0006831F4 /* Preview Assets.xcassets in Resources */,
+				DDB8EC1C27728F8C006831F4 /* IchhabnochnieJSON.json in Resources */,
+				DDB8EC2F277290AA006831F4 /* WahrheitJSON.json in Resources */,
+				DDB8EC0D27728CE0006831F4 /* Assets.xcassets in Resources */,
+				DD8C779B277BB89800B6E89F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A79F176480A6C61732FE623 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD83B9BD44D9B48466F98A24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trinkspielplatz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDB8EC0127728CDD006831F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5087252A04096300CFB8B0 /* EinhundertView.swift in Sources */,
+				DDB8EC37277293D0006831F4 /* EherView.swift in Sources */,
+				DD5087202A04096300CFB8B0 /* ZuFruehModalBangView.swift in Sources */,
+				DD5086FA2A03CCB400CFB8B0 /* DataLoader.swift in Sources */,
+				DDB8EC1D27728F8C006831F4 /* NavBarModifier.swift in Sources */,
+				DD5087062A04070E00CFB8B0 /* ShitheadView.swift in Sources */,
+				DD5087082A04073700CFB8B0 /* WerBinIchView.swift in Sources */,
+				DD5087262A04096300CFB8B0 /* BusfahrerView.swift in Sources */,
+				DD5087242A04096300CFB8B0 /* BusfahrerPhase2View.swift in Sources */,
+				DD5087282A04096300CFB8B0 /* BusfahrerPhase3View.swift in Sources */,
+				DD5087272A04096300CFB8B0 /* WuerfelView.swift in Sources */,
+				DD5087022A04060300CFB8B0 /* BannerAdView.swift in Sources */,
+				DD50871F2A04096300CFB8B0 /* KingsCupView.swift in Sources */,
+				DDB8EC2A277290AA006831F4 /* PflichtData.swift in Sources */,
+				DD5087232A04096300CFB8B0 /* StartModalEinhundertView.swift in Sources */,
+				DD3669532779F6DF001DAD9B /* BannerAd.swift in Sources */,
+				DD5086FE2A03CEEB00CFB8B0 /* Utils.swift in Sources */,
+				DD50871C2A04096300CFB8B0 /* StartModalPferderennenView.swift in Sources */,
+				DDD2BB51277A26FD00554FE5 /* AnleitungenView.swift in Sources */,
+				DDB8EC1B27728F8C006831F4 /* NochnieView.swift in Sources */,
+				DD50871B2A04096300CFB8B0 /* WerbinichData.swift in Sources */,
+				DD5087002A03CF1600CFB8B0 /* SocketService.swift in Sources */,
+				DDB8EC1E27728F8C006831F4 /* NochnieData.swift in Sources */,
+				DD5087212A04096300CFB8B0 /* MaexchenView.swift in Sources */,
+				DD50871D2A04096300CFB8B0 /* VerliererModalBangView.swift in Sources */,
+				DD5087222A04096300CFB8B0 /* BangView.swift in Sources */,
+				DDB8EC0B27728CDD006831F4 /* HomeView.swift in Sources */,
+				DD5086FC2A03CEBB00CFB8B0 /* Card.swift in Sources */,
+				DDB8EC0927728CDD006831F4 /* trinkspielplatzApp.swift in Sources */,
+				DD50870A2A04079E00CFB8B0 /* PferderennenView.swift in Sources */,
+				DD5087042A0406EA00CFB8B0 /* HoeherTieferView.swift in Sources */,
+				DDB8EC2E277290AA006831F4 /* WahrheitPflichtView.swift in Sources */,
+				DD50871E2A04096300CFB8B0 /* KartenView.swift in Sources */,
+				DDB8EC2C277290AA006831F4 /* WahrheitData.swift in Sources */,
+				DDB8EC35277293D0006831F4 /* EherData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DDB8EC1127728CE0006831F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DDB8EC1227728CE0006831F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDB8EC1427728CE0006831F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB605505787CFB48A3F21D3F /* Pods-trinkspielplatz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"trinkspielplatz/Preview Content\"";
+				DEVELOPMENT_TEAM = H5HBDBL96L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = trinkspielplatz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Trinkspielplatz;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.charbelchougourou.trinkspielplatz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDB8EC1527728CE0006831F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AE94D390DEC9FA17A6221F4 /* Pods-trinkspielplatz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"trinkspielplatz/Preview Content\"";
+				DEVELOPMENT_TEAM = H5HBDBL96L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = trinkspielplatz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Trinkspielplatz;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.charbelchougourou.trinkspielplatz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDB8EC0027728CDD006831F4 /* Build configuration list for PBXProject "trinkspielplatz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB8EC1127728CE0006831F4 /* Debug */,
+				DDB8EC1227728CE0006831F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDB8EC1327728CE0006831F4 /* Build configuration list for PBXNativeTarget "trinkspielplatz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB8EC1427728CE0006831F4 /* Debug */,
+				DDB8EC1527728CE0006831F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD5087292A040A6100CFB8B0 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DD50872C2A040A7B00CFB8B0 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+		DD50872F2A040BF400CFB8B0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD50872A2A040A6100CFB8B0 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD5087292A040A6100CFB8B0 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+		DD50872D2A040A7B00CFB8B0 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD50872C2A040A7B00CFB8B0 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		DD5087302A040BF400CFB8B0 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD50872F2A040BF400CFB8B0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DDB8EBFD27728CDD006831F4 /* Project object */;
+}
