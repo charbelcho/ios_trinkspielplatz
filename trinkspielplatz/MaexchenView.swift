@@ -28,7 +28,6 @@ struct MaexchenView: View {
     @State private var offset: CGFloat = -5
     @State private var isBouncing = false
     
-    //MARK
     @State private var showTippen = true
     
     var body: some View {

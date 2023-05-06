@@ -7,6 +7,4 @@
 
 import Foundation
 
-struct NochnieData: Codable {
-    var text: String
-}
+

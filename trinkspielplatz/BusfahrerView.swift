@@ -61,7 +61,7 @@ struct BusfahrerView: View {
     
     @State var spielernameEingabe = ""
     @State var raumIdEingabe = ""
-    @State var name = ""
+//    @State var name = ""
     @State var raumModalText = ""
     
     @Binding var isLoading: Bool
@@ -71,35 +71,9 @@ struct BusfahrerView: View {
     @State var alertPlaceholderBusfahrer: String = ""
     @State var alertButtonTextBusfahrer: String = ""
     @State var correctInRow = 0
-
-    @SceneStorage("connectedToSocket") var connectedToSocket: Bool = false
-    @SceneStorage("busfahrerUsername") var busfahrerUsername = ""
-    @SceneStorage("spielername") var spielername = ""
-    @SceneStorage("busfahrer") var busfahrer = ""
     
     @State var roomBusfahrer = RoomBusfahrer(roomId: "", deck: [], users: [], phase: 1)
-    @State var userBusfahrer = UserBusfahrer(id: "Hallo", username: "Du", eigeneKarten: [], flipArray: [false, false, false])
-    
-    @SceneStorage("roomBusfahrer") var roomBusfahrerStore: Data = Data()
-    @SceneStorage("userBusfahrer") var userBusfahrerStore: Data = Data()
-
-    @State var meineKarten: [Int] = [Int]()
-    @State var fDegreeArray = [-90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0]
-    @State var bDegreeArray = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    @State var flipArray = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
-    @State var myCardsFDegreeArray = [0.0, 0.0, 0.0]
-    @State var myCardsBDegreeArray = [90.0, 90.0, 90.0]
-    @State var myCardsFlipArray = [false, false, false]
-    @State var trinkAnzahlArray = [0, 0 ,0]
-    
-    @SceneStorage("meineKarten") var meineKartenStore: Data = Data()
-    @SceneStorage("fDegreeArray") var fDegreeArrayStore: Data = Data()
-    @SceneStorage("bDegreeArray") var bDegreeArrayStore: Data = Data()
-    @SceneStorage("flipArray") var flipArrayStore: Data = Data()
-    @SceneStorage("myCardsFDegreeArray") var myCardsFDegreeArrayStore: Data = Data()
-    @SceneStorage("myCardsBDegreeArray") var myCardsBDegreeArrayStore: Data = Data()
-    @SceneStorage("myCardsFlipArray") var myCardsFlipArrayStore: Data = Data()
-    @SceneStorage("trinkAnzahlArray") var trinkAnzahlArrayStore: Data = Data()
+    @State var userBusfahrer = UserBusfahrer(id: "", username: "", eigeneKarten: [], flipArray: [false, false, false])
     
     let durationAndDelay : CGFloat = 0.1
     
@@ -160,7 +134,7 @@ struct BusfahrerView: View {
                             Spacer()
                             RoundedRectangle(cornerRadius: gui.cornerRadius25)
                                 .fill(.white)
-                                .frame(width: geo.size.width * 0.95, height: service.openAlertBusfahrer /*&& service.roomBusfahrer.phase == 1*/ ? geo.size.height * 0.95 : geo.size.height * 0.75)
+                                .frame(width: geo.size.width * 0.95, height: service.openAlertBusfahrer && service.roomBusfahrer.phase != 2 ? geo.size.height * 0.95 : geo.size.height * 0.75)
                                 .overlay(
                                     VStack(){
                                         HStack(alignment: .top) {
@@ -219,7 +193,7 @@ struct BusfahrerView: View {
                                         }
                                         Spacer()
                                     }
-                                    .frame(height: service.openAlertBusfahrer /*&& service.roomBusfahrer.phase == 1*/ ? geo.size.height * 0.9 : geo.size.height * 0.7)
+                                    .frame(height: service.openAlertBusfahrer && service.roomBusfahrer.phase != 2 ? geo.size.height * 0.9 : geo.size.height * 0.7)
                                 )
                             Spacer()
                         }
@@ -243,7 +217,8 @@ struct BusfahrerView: View {
                                 Text(service.roomBusfahrer.phase == 1 ? "Karten austeilen" : service.roomBusfahrer.phase == 2 ? "Busfahren" : "Zum Start")
                                     .fontWeight(.semibold)
                             }
-                            .disabled(service.roomBusfahrer.phase == 3 && correctInRow < 5)
+                            .disabled((service.roomBusfahrer.phase == 2 && service.fDegreeArray[14] == -90.0) || (service.roomBusfahrer.phase == 3 && correctInRow < 5))
+                            .opacity((service.roomBusfahrer.phase == 2 && service.fDegreeArray[14] == -90.0) || (service.roomBusfahrer.phase == 3 && correctInRow < 5) ? 0.5 : 1)
                             .buttonStyle(ThreeDLight())
                             .frame(width: geo.size.width * 0.95, height: geo.size.height * 0.08)
                         }
@@ -328,8 +303,7 @@ struct BusfahrerView: View {
             
             
             BannerAdView()
-                .background(Color.black.opacity(0.2))
-                .hidden(service.openAlertBusfahrer && service.roomBusfahrer.phase == 1)
+                .hidden(service.openAlertBusfahrer && service.roomBusfahrer.phase != 2)
         }
         .onAppear(perform: {
             if !service.connectedToSocket {
@@ -381,10 +355,8 @@ struct BusfahrerView: View {
         }
         .onReceive(inactivityTimer, perform: { _ in
             if scenePhase == .active {
-                print("10 Sekunden vergangen")
                 self.inactivityTimer.upstream.connect().cancel()
             } else {
-                print("10 Sekunden vergangen im Hintergrund")
                 if service.connectedToSocket {
                     service.disconnectFromSocket()
                     raumVerlassen()
@@ -395,10 +367,8 @@ struct BusfahrerView: View {
         })
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .inactive || newPhase == .background {
-                print("Inactive or Backgound")
                 self.inactivityTimer = Timer.publish(every: 10, on: .current, in: .common).autoconnect()
             } else if newPhase == .active {
-                print("Active")
                 if !service.connectedToSocket {
                     service.connectToSocket()
                     if service.busfahrerUsername.count == 0 {
@@ -459,34 +429,6 @@ struct BusfahrerView: View {
         }
         isLoading = false
     }
-    
-//    func encodeData() {
-//        let encoder = JSONEncoder()
-//        if let dataRoomBusfahrer = try? encoder.encode(service.roomBusfahrer) { roomBusfahrerStore = dataRoomBusfahrer }
-//        if let dataUserBusfahrer = try? encoder.encode(service.userBusfahrer) { userBusfahrerStore = dataUserBusfahrer }
-//        if let dataMeineKarten = try? encoder.encode(service.meineKarten) { meineKartenStore = dataMeineKarten }
-//        if let dataFDegreeArray = try? encoder.encode(service.fDegreeArray) { fDegreeArrayStore = dataFDegreeArray }
-//        if let dataBDegreeArray = try? encoder.encode(service.bDegreeArray) { bDegreeArrayStore = dataBDegreeArray }
-//        if let dataFlipArray = try? encoder.encode(service.flipArray) { flipArrayStore = dataFlipArray }
-//        if let dataMyCardsFDegreeArray = try? encoder.encode(service.myCardsFDegreeArray) { myCardsFDegreeArrayStore = dataMyCardsFDegreeArray }
-//        if let dataMyCardsBDegreeArray = try? encoder.encode(service.myCardsBDegreeArray) { myCardsBDegreeArrayStore = dataMyCardsBDegreeArray }
-//        if let dataMyCardsFlipArray = try? encoder.encode(service.myCardsFlipArray) { myCardsFlipArrayStore = dataMyCardsFlipArray }
-//        if let dataTrinkAnzahlArray = try? encoder.encode(service.trinkAnzahlArray) { trinkAnzahlArrayStore = dataTrinkAnzahlArray }
-//    }
-//
-//    func decodeData() {
-//        let decoder = JSONDecoder()
-//        if let dataRoomBusfahrer = try? decoder.decode(RoomBusfahrer.self, from: roomBusfahrerStore) { service.roomBusfahrer = dataRoomBusfahrer }
-//        if let dataUserBusfahrer = try? decoder.decode(UserBusfahrer.self, from: userBusfahrerStore) { service.userBusfahrer = dataUserBusfahrer }
-//        if let dataMeineKarten = try? decoder.decode([Int].self, from: meineKartenStore) { service.meineKarten = dataMeineKarten }
-//        if let dataFDegreeArray = try? decoder.decode([Double].self, from: fDegreeArrayStore) { service.fDegreeArray = dataFDegreeArray }
-//        if let dataBDegreeArray = try? decoder.decode([Double].self, from: bDegreeArrayStore) { service.bDegreeArray = dataBDegreeArray }
-//        if let dataFlipArray = try? decoder.decode([Bool].self, from: flipArrayStore) { service.flipArray = dataFlipArray }
-//        if let dataMyCardsFDegreeArray = try? decoder.decode([Double].self, from: myCardsFDegreeArrayStore) { service.myCardsFDegreeArray = dataMyCardsFDegreeArray }
-//        if let dataMyCardsBDegreeArray = try? decoder.decode([Double].self, from: myCardsBDegreeArrayStore) { service.myCardsBDegreeArray = dataMyCardsBDegreeArray }
-//        if let dataMyCardsFlipArray = try? decoder.decode([Bool].self, from: myCardsFlipArrayStore) { service.myCardsFlipArray = dataMyCardsFlipArray }
-//        if let dataTrinkAnzahlArray = try? decoder.decode([Int].self, from: trinkAnzahlArrayStore) { service.trinkAnzahlArray = dataTrinkAnzahlArray }
-//    }
     
     func arrayAsJson() -> String {
         let encoder = JSONEncoder()

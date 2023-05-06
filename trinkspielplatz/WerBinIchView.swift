@@ -12,26 +12,24 @@ import Foundation
 
 
 struct WerBinIchView: View {
-//    @StateObject var service: ServiceWerbinich = ServiceWerbinich()
     @Environment(\.scenePhase) var scenePhase
     @ObservedObject var service: ServiceWerbinich
     let gui = Gui()
     @State private var showAnleitung = false
-    @State var spielernameEingabe = ""
-    @State var raumId = ""
-    @State var raumIdEingabe = ""
-    @State var werbinichText = ""
-    @State var raumModalText = ""
-    @State var alert: Int = 0
-    @State var alertTitle: String = ""
-    @State var alertText: String = ""
-    @State var alertPlaceholder: String = ""
-    @State var alertButtonText: String = ""
+    @State private var spielernameEingabe = ""
+    @State private var raumId = ""
+    @State private var raumIdEingabe = ""
+    @State private var werbinichText = ""
+    @State private var raumModalText = ""
+    @State private var alert: Int = 0
+    @State private var alertTitle: String = ""
+    @State private var alertText: String = ""
+    @State private var alertPlaceholder: String = ""
+    @State private var alertButtonText: String = ""
+    @State private var showSafari: Bool = false
 
     var setToast: (Int) -> Void
     @Binding var isLoading: Bool
-    
-    
     
     var body: some View {
         VStack(spacing: 0) {
@@ -144,9 +142,20 @@ struct WerBinIchView: View {
                                                     .foregroundColor(Color.black)
                                             }
                                             else if user.username != service.werbinichUsername {
-                                                Text("\(user.username) : \(user.werbinich.text)")
-                                                    .padding()
-                                                    .foregroundColor(Color.black)
+                                                HStack(spacing: 10) {
+                                                    Text("\(user.username) : \(user.werbinich.text)")
+                                                        .padding([.leading, .top, .bottom])
+                                                        .foregroundColor(Color.black)
+                                                        .sheet(isPresented: $showSafari, content: {
+                                                            SFSafariViewWrapper(url: URL(string: user.werbinich.info)!)
+                                                        })
+                                                    
+                                                    Button(action: {
+                                                        showSafari.toggle()
+                                                    }) {
+                                                        Image(systemName: "info.circle")
+                                                    }
+                                                }
                                             }
                                             else {
                                                 Text("\(user.username) : **********")
@@ -160,10 +169,10 @@ struct WerBinIchView: View {
                                 )
                             Spacer()
                         }
+                        .padding(.top, 5.0)
 
                         HStack {
                             Button(action: {
-                                service.isLoading = true
                                 service.auswaehlen(socketData: ["roomId": service.room.roomId])
                             }) {
                                 Text("Auswählen")
@@ -221,6 +230,17 @@ struct WerBinIchView: View {
                                 raumBeitreten()
                             })
                         }
+                    } else if alertTitle.contains("Wähle Namen für") {
+                        TextField("Wer ist \(service.speichernFuerUsername)", text: $werbinichText)
+                            .onReceive(Just(werbinichText)) { _ in limitText(&werbinichText, 25) }
+                            .disableAutocorrection(true)
+                        Button(alertButtonText, action: {
+                            service.isLoading = true
+                            service.namenSpeichern(socketData: ["roomId": service.room.roomId, "username": service.speichernFuerUsername, "werbinich": werbinichText])
+                            withAnimation(.spring()) {
+                                service.openAlert = false
+                            }
+                        })
                     }
                 }, message: {
                     Text(alertText)
@@ -228,11 +248,9 @@ struct WerBinIchView: View {
             }
             
             BannerAdView()
-                .background(Color.black.opacity(0.2))
-                .hidden(service.openAlert || service.isWerbinichModal1Open || service.isWerbinichModal2Open)
+                .hidden(service.openAlert)
         }
         .onAppear(perform: {
-            print("Connecting... \(service.connectedToSocket)")
             if service.connectedToSocket {
                 service.isLoading = true
                 setAlertInfo(alert: 1)
@@ -265,11 +283,14 @@ struct WerBinIchView: View {
                 }
             }
         }
+        .onChange(of: service.ausgewaehlt) { newValue in
+            if newValue {
+                setAlertInfo(alert: 3)
+                service.ausgewaehlt = false
+            }
+        }
         .onChange(of: scenePhase) { newPhase in
-            if newPhase == .inactive || newPhase == .background {
-                print("Inactive or Backgound Wer bin ich")
-            } else if newPhase == .active {
-                print("Active Wer bin ich")
+            if newPhase == .active {
                 if !service.connectedToSocket {
                     service.connectToSocket()
                 }
@@ -330,6 +351,15 @@ struct WerBinIchView: View {
             alertText = "Gib eine RaumID ein."
             alertPlaceholder = "RaumID"
             alertButtonText = "Beitreten"
+            withAnimation(.spring()) {
+                service.openAlert = true
+                service.isLoading = true
+            }
+        } else if alert == 3 {
+            alertTitle = "Wähle Namen für \(service.speichernFuerUsername)"
+            alertText = ""
+            alertPlaceholder = ""
+            alertButtonText = "Speichern"
             withAnimation(.spring()) {
                 service.openAlert = true
                 service.isLoading = true

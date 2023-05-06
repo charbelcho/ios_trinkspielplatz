@@ -7,6 +7,4 @@
 
 import Foundation
 
-struct WahrheitData: Codable {
-    var text: String
-}
+

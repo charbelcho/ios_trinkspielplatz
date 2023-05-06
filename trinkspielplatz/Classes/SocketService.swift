@@ -9,46 +9,6 @@ import Foundation
 import SocketIO
 import SwiftUI
 
-struct TestMessage: Decodable {
-    let roomId, username: String
-}
-
-struct Room {
-    var roomId: String
-    var users: [User]
-}
-
-struct RoomBusfahrer {
-    var roomId: String
-    var deck: [Card]
-    var users: [UserBusfahrer]
-    var phase: Int
-}
-
-struct User: Hashable {
-    var id, username: String
-    var werbinich: WerBinIch
-}
-
-struct UserBusfahrer: Equatable {
-    static func == (lhs: UserBusfahrer, rhs: UserBusfahrer) -> Bool {
-        return lhs.id == rhs.id && lhs.username == rhs.username
-    }
-    
-    var id, username: String
-    var eigeneKarten: [Int]
-    var flipArray: [Bool]
-}
-
-struct WerBinIch: Hashable {
-    var id: Int
-    var text, info: String
-}
-
-
-
-
-
 final class ServiceWerbinich: ObservableObject {
     private var manager = SocketManager(socketURL: URL(string: "wss://socket-ios-backend.herokuapp.com")!, config: [.log(true), .compress])
 //    private var manager = SocketManager(socketURL: URL(string: "ws://localhost:8000")!, config: [.log(true), .compress])
@@ -56,24 +16,20 @@ final class ServiceWerbinich: ObservableObject {
     
     @Published var isLoading = true
     @Published var connectedToSocket: Bool = false
-    @Published var isWerbinichModal1Open: Bool = false
-    @Published var isWerbinichModal2Open: Bool = false
     @Published var openAlert: Bool = false
     @Published var keinRaumGefunden: Bool = false
-    
     @Published var raumVoll: Bool = false
-    
     @Published var nameBesetzt: Bool = false
     
     @Published var werbinichUsername = ""
-    
+    @Published var ausgewaehlt: Bool = false
     @Published var raumIdWerbinich = ""
     @Published var socketData: SocketData = []
     
     @Published var room = Room(roomId: "", users: [])
-    @Published var user = User(id: "Hallo", username: "Du", werbinich: WerBinIch(id: 1, text: "", info: ""))
+    @Published var user = User(id: "", username: "", werbinich: WerBinIch(id: 0, text: "", info: ""))
     
-    @Published var werbinich = WerBinIch(id: 0, text: "Pele", info: "a")
+    @Published var werbinich = WerBinIch(id: 0, text: "", info: "")
     @Published var speichernFuerUsername = ""
     
     @Published var random: [Card] = DataLoader().cardArray.shuffled()
@@ -90,12 +46,16 @@ final class ServiceWerbinich: ObservableObject {
     func addHandlers() {
         socket.on("connected") { [weak self] (data, ack)  in
             self?.connectedToSocket = true
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("werbinIchUsername") { [weak self] (data, ack)  in
             self?.werbinichUsername = data[0] as! String
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("room") { [weak self] (data, ack) in
@@ -119,33 +79,44 @@ final class ServiceWerbinich: ObservableObject {
                     self?.room.users.append(newUser)
                 }
             }
-            self?.isLoading = false
-        }
-        
-        socket.on("closeModal") { [weak self] (data, ack) in
-            self?.isWerbinichModal1Open = false
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("keinRaumGefunden") { [weak self] (data, ack) in
             self?.keinRaumGefunden = true
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("roomFull") { [weak self] (data, ack) in
             self?.raumVoll = true
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("nameBesetzt") { [weak self] (data, ack) in
             self?.nameBesetzt = true
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("speicherNamenFuer") { [weak self] (data, ack) in
             self?.speichernFuerUsername = self?.room.users[data[0] as! Int].username ?? ""
-            self?.isWerbinichModal2Open = true
-            self?.isLoading = false
+            self?.ausgewaehlt = true
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
+        }
+        
+        socket.on("loading") { [weak self] (data, ack) in
+            withAnimation(.spring()){
+                self?.isLoading = true
+            }
         }
         
     }
@@ -163,13 +134,11 @@ final class ServiceWerbinich: ObservableObject {
         socket.emit("usernameWerbinIch", socketData)
     }
     
-    func usernameBusfahrer(socketData: SocketData) {
-        socket.emit("usernameBusfahrer", socketData)
-    }
-    
     func leaveRoom(socketData: SocketData) {
         socket.emit("leave", socketData)
-        isLoading = false
+        withAnimation(.spring()) {
+            isLoading = false
+        }
     }
     
     func createRoom(socketData: SocketData) {
@@ -187,6 +156,10 @@ final class ServiceWerbinich: ObservableObject {
     func zuweisen(socketData: SocketData) {
         socket.emit("zuweisen", socketData)
     }
+    
+    func namenSpeichern(socketData: SocketData) {
+        socket.emit("namenSpeichern", socketData)
+    }
 }
 
 final class ServiceBusfahrer: ObservableObject {
@@ -203,11 +176,9 @@ final class ServiceBusfahrer: ObservableObject {
     @Published var nameBesetztBusfahrer: Bool = false
     @Published var busfahrerUsername = ""
     @Published var roomBusfahrer = RoomBusfahrer(roomId: "", deck: [], users: [], phase: 1)
-    @Published var userBusfahrer = UserBusfahrer(id: "Hallo", username: "Du", eigeneKarten: [], flipArray: [false, false, false])
+    @Published var userBusfahrer = UserBusfahrer(id: "", username: "", eigeneKarten: [], flipArray: [false, false, false])
     
-    @Published var phase = 0
     @Published var meineKarten: [Int] = [Int]()
-    @Published var text = ""
     
     @Published var fDegreeArray = [-90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0, -90.0]
     @Published var bDegreeArray = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
@@ -236,20 +207,17 @@ final class ServiceBusfahrer: ObservableObject {
     func addHandlers() {
         socket.on("connected") { [weak self] (data, ack)  in
             self?.connectedToSocket = true
-            self?.isLoading = false
-        }
-        
-        socket.on("busfahrerUsername") { [weak self] (data, ack)  in
-            self?.connectedToSocket = true
-            self?.isLoading = false
+            withAnimation(.spring()) {
+                self?.isLoading = false
+            }
         }
         
         socket.on("busfahrerUsername") { [weak self] (data, ack)  in
             withAnimation(.spring()) {
                 self?.busfahrerUsername = data[0] as! String
+                self?.spielername = data[0] as! String
+                self?.isLoading = false
             }
-            self?.spielername = data[0] as! String
-            self?.isLoading = false
         }
         
         socket.on("roomBusfahrer") { [weak self] (data, ack) in
@@ -344,6 +312,12 @@ final class ServiceBusfahrer: ObservableObject {
             }
         }
         
+        socket.on("loading") { [weak self] (data, ack) in
+            withAnimation(.spring()){
+                self?.isLoading = true
+            }
+        }
+        
     }
     
     func connectToSocket() {
@@ -365,6 +339,9 @@ final class ServiceBusfahrer: ObservableObject {
     
     func leaveRoomBusfahrer(socketData: SocketData) {
         socket.emit("leaveBusfahrer", socketData)
+        withAnimation(.spring()) {
+            isLoading = false
+        }
     }
     
     func createRoomBusfahrer(socketData: SocketData) {

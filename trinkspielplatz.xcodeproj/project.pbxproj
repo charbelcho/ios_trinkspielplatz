@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30FE625AF9D3DB38F51BAD9B /* Pods_trinkspielplatz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0787D917B43E624774FADA /* Pods_trinkspielplatz.framework */; };
 		DD3669532779F6DF001DAD9B /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3669522779F6DF001DAD9B /* BannerAd.swift */; };
 		DD5086FA2A03CCB400CFB8B0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */; };
 		DD5086FC2A03CEBB00CFB8B0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5086FB2A03CEBB00CFB8B0 /* Card.swift */; };
@@ -17,7 +18,6 @@
 		DD5087062A04070E00CFB8B0 /* ShitheadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087052A04070E00CFB8B0 /* ShitheadView.swift */; };
 		DD5087082A04073700CFB8B0 /* WerBinIchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087072A04073700CFB8B0 /* WerBinIchView.swift */; };
 		DD50870A2A04079E00CFB8B0 /* PferderennenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087092A04079E00CFB8B0 /* PferderennenView.swift */; };
-		DD50871B2A04096300CFB8B0 /* WerbinichData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50870D2A04096300CFB8B0 /* WerbinichData.swift */; };
 		DD50871C2A04096300CFB8B0 /* StartModalPferderennenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50870E2A04096300CFB8B0 /* StartModalPferderennenView.swift */; };
 		DD50871D2A04096300CFB8B0 /* VerliererModalBangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50870F2A04096300CFB8B0 /* VerliererModalBangView.swift */; };
 		DD50871E2A04096300CFB8B0 /* KartenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5087102A04096300CFB8B0 /* KartenView.swift */; };
@@ -34,6 +34,7 @@
 		DD50872B2A040A6100CFB8B0 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = DD50872A2A040A6100CFB8B0 /* SocketIO */; };
 		DD50872E2A040A7B00CFB8B0 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = DD50872D2A040A7B00CFB8B0 /* SimpleToast */; };
 		DD5087312A040BF400CFB8B0 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DD5087302A040BF400CFB8B0 /* GoogleMobileAds */; };
+		DD50B9EE2A05C65200E87B79 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9ED2A05C65200E87B79 /* SFSafariViewWrapper.swift */; };
 		DD8C779B277BB89800B6E89F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD8C779A277BB89800B6E89F /* GoogleService-Info.plist */; };
 		DDB8EC0927728CDD006831F4 /* trinkspielplatzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC0827728CDD006831F4 /* trinkspielplatzApp.swift */; };
 		DDB8EC0B27728CDD006831F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC0A27728CDD006831F4 /* HomeView.swift */; };
@@ -42,22 +43,19 @@
 		DDB8EC1B27728F8C006831F4 /* NochnieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC1627728F8C006831F4 /* NochnieView.swift */; };
 		DDB8EC1C27728F8C006831F4 /* IchhabnochnieJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */; };
 		DDB8EC1D27728F8C006831F4 /* NavBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC1827728F8C006831F4 /* NavBarModifier.swift */; };
-		DDB8EC1E27728F8C006831F4 /* NochnieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC1927728F8C006831F4 /* NochnieData.swift */; };
-		DDB8EC2A277290AA006831F4 /* PflichtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC22277290AA006831F4 /* PflichtData.swift */; };
-		DDB8EC2C277290AA006831F4 /* WahrheitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC24277290AA006831F4 /* WahrheitData.swift */; };
 		DDB8EC2D277290AA006831F4 /* PflichtJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC25277290AA006831F4 /* PflichtJSON.json */; };
 		DDB8EC2E277290AA006831F4 /* WahrheitPflichtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC26277290AA006831F4 /* WahrheitPflichtView.swift */; };
 		DDB8EC2F277290AA006831F4 /* WahrheitJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC27277290AA006831F4 /* WahrheitJSON.json */; };
-		DDB8EC35277293D0006831F4 /* EherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC31277293D0006831F4 /* EherData.swift */; };
+		DDB8EC35277293D0006831F4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC31277293D0006831F4 /* Data.swift */; };
 		DDB8EC36277293D0006831F4 /* WerWuerdeEherJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */; };
 		DDB8EC37277293D0006831F4 /* EherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8EC33277293D0006831F4 /* EherView.swift */; };
 		DDD2BB51277A26FD00554FE5 /* AnleitungenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD2BB50277A26FD00554FE5 /* AnleitungenView.swift */; };
-		F171DC529056B2C6F79B7457 /* Pods_trinkspielplatz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE869827533D904E64CDACC /* Pods_trinkspielplatz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8AE94D390DEC9FA17A6221F4 /* Pods-trinkspielplatz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trinkspielplatz.release.xcconfig"; path = "Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz.release.xcconfig"; sourceTree = "<group>"; };
-		BFE869827533D904E64CDACC /* Pods_trinkspielplatz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trinkspielplatz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C99F0C9FCB91D902F644C0 /* Pods-trinkspielplatz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trinkspielplatz.debug.xcconfig"; path = "Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz.debug.xcconfig"; sourceTree = "<group>"; };
+		3DAC3E4F21ACB2FCBC88614C /* Pods-trinkspielplatz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trinkspielplatz.release.xcconfig"; path = "Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz.release.xcconfig"; sourceTree = "<group>"; };
+		9A0787D917B43E624774FADA /* Pods_trinkspielplatz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trinkspielplatz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3669522779F6DF001DAD9B /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		DD5086FB2A03CEBB00CFB8B0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		DD5087052A04070E00CFB8B0 /* ShitheadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShitheadView.swift; sourceTree = "<group>"; };
 		DD5087072A04073700CFB8B0 /* WerBinIchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerBinIchView.swift; sourceTree = "<group>"; };
 		DD5087092A04079E00CFB8B0 /* PferderennenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PferderennenView.swift; sourceTree = "<group>"; };
-		DD50870D2A04096300CFB8B0 /* WerbinichData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WerbinichData.swift; sourceTree = "<group>"; };
 		DD50870E2A04096300CFB8B0 /* StartModalPferderennenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModalPferderennenView.swift; sourceTree = "<group>"; };
 		DD50870F2A04096300CFB8B0 /* VerliererModalBangView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerliererModalBangView.swift; sourceTree = "<group>"; };
 		DD5087102A04096300CFB8B0 /* KartenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KartenView.swift; sourceTree = "<group>"; };
@@ -82,6 +79,7 @@
 		DD5087182A04096300CFB8B0 /* BusfahrerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusfahrerView.swift; sourceTree = "<group>"; };
 		DD5087192A04096300CFB8B0 /* WuerfelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WuerfelView.swift; sourceTree = "<group>"; };
 		DD50871A2A04096300CFB8B0 /* BusfahrerPhase3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusfahrerPhase3View.swift; sourceTree = "<group>"; };
+		DD50B9ED2A05C65200E87B79 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		DD8C779A277BB89800B6E89F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDB8EC0527728CDD006831F4 /* trinkspielplatz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trinkspielplatz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB8EC0827728CDD006831F4 /* trinkspielplatzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trinkspielplatzApp.swift; sourceTree = "<group>"; };
@@ -91,18 +89,14 @@
 		DDB8EC1627728F8C006831F4 /* NochnieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NochnieView.swift; sourceTree = "<group>"; };
 		DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IchhabnochnieJSON.json; sourceTree = "<group>"; };
 		DDB8EC1827728F8C006831F4 /* NavBarModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarModifier.swift; sourceTree = "<group>"; };
-		DDB8EC1927728F8C006831F4 /* NochnieData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NochnieData.swift; sourceTree = "<group>"; };
-		DDB8EC22277290AA006831F4 /* PflichtData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PflichtData.swift; sourceTree = "<group>"; };
-		DDB8EC24277290AA006831F4 /* WahrheitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WahrheitData.swift; sourceTree = "<group>"; };
 		DDB8EC25277290AA006831F4 /* PflichtJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.json; path = PflichtJSON.json; sourceTree = "<group>"; tabWidth = 2; };
 		DDB8EC26277290AA006831F4 /* WahrheitPflichtView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WahrheitPflichtView.swift; sourceTree = "<group>"; };
 		DDB8EC27277290AA006831F4 /* WahrheitJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WahrheitJSON.json; sourceTree = "<group>"; };
-		DDB8EC31277293D0006831F4 /* EherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EherData.swift; sourceTree = "<group>"; };
+		DDB8EC31277293D0006831F4 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WerWuerdeEherJSON.json; sourceTree = "<group>"; };
 		DDB8EC33277293D0006831F4 /* EherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EherView.swift; sourceTree = "<group>"; };
 		DDB8EC3827729D34006831F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DDD2BB50277A26FD00554FE5 /* AnleitungenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnleitungenView.swift; sourceTree = "<group>"; };
-		FB605505787CFB48A3F21D3F /* Pods-trinkspielplatz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trinkspielplatz.debug.xcconfig"; path = "Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,19 +105,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5087312A040BF400CFB8B0 /* GoogleMobileAds in Frameworks */,
-				F171DC529056B2C6F79B7457 /* Pods_trinkspielplatz.framework in Frameworks */,
 				DD50872E2A040A7B00CFB8B0 /* SimpleToast in Frameworks */,
 				DD50872B2A040A6100CFB8B0 /* SocketIO in Frameworks */,
+				30FE625AF9D3DB38F51BAD9B /* Pods_trinkspielplatz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		809884DDE425C660C6CE550D /* Frameworks */ = {
+		15255E4C76109DB8528CCE32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFE869827533D904E64CDACC /* Pods_trinkspielplatz.framework */,
+				9A0787D917B43E624774FADA /* Pods_trinkspielplatz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,10 +125,41 @@
 		ABF9FF9C5DC6B618971C6DA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FB605505787CFB48A3F21D3F /* Pods-trinkspielplatz.debug.xcconfig */,
-				8AE94D390DEC9FA17A6221F4 /* Pods-trinkspielplatz.release.xcconfig */,
+				19C99F0C9FCB91D902F644C0 /* Pods-trinkspielplatz.debug.xcconfig */,
+				3DAC3E4F21ACB2FCBC88614C /* Pods-trinkspielplatz.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD50B9E82A05ACCF00E87B79 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */,
+				DDB8EC25277290AA006831F4 /* PflichtJSON.json */,
+				DDB8EC27277290AA006831F4 /* WahrheitJSON.json */,
+				DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DD50B9E92A05ACF500E87B79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD3669522779F6DF001DAD9B /* BannerAd.swift */,
+				DD5086FB2A03CEBB00CFB8B0 /* Card.swift */,
+				DDB8EC31277293D0006831F4 /* Data.swift */,
+				DD50B9ED2A05C65200E87B79 /* SFSafariViewWrapper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD50B9EA2A05AD2100E87B79 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */,
+				DD5086FF2A03CF1600CFB8B0 /* SocketService.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		DDB8EBFC27728CDD006831F4 = {
@@ -143,7 +168,7 @@
 				DDB8EC0727728CDD006831F4 /* trinkspielplatz */,
 				DDB8EC0627728CDD006831F4 /* Products */,
 				ABF9FF9C5DC6B618971C6DA2 /* Pods */,
-				809884DDE425C660C6CE550D /* Frameworks */,
+				15255E4C76109DB8528CCE32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,15 +183,14 @@
 		DDB8EC0727728CDD006831F4 /* trinkspielplatz */ = {
 			isa = PBXGroup;
 			children = (
+				DD50B9EA2A05AD2100E87B79 /* Classes */,
+				DD50B9E92A05ACF500E87B79 /* Model */,
+				DD50B9E82A05ACCF00E87B79 /* Data */,
 				DDB8EC3827729D34006831F4 /* Info.plist */,
 				DD8C779A277BB89800B6E89F /* GoogleService-Info.plist */,
 				DDB8EC0827728CDD006831F4 /* trinkspielplatzApp.swift */,
-				DD3669522779F6DF001DAD9B /* BannerAd.swift */,
 				DD5087012A04060300CFB8B0 /* BannerAdView.swift */,
-				DD5086FB2A03CEBB00CFB8B0 /* Card.swift */,
 				DD5086FD2A03CEEB00CFB8B0 /* Utils.swift */,
-				DD5086FF2A03CF1600CFB8B0 /* SocketService.swift */,
-				DD5086F92A03CCB400CFB8B0 /* DataLoader.swift */,
 				DDB8EC1827728F8C006831F4 /* NavBarModifier.swift */,
 				DDB8EC0A27728CDD006831F4 /* HomeView.swift */,
 				DDD2BB50277A26FD00554FE5 /* AnleitungenView.swift */,
@@ -188,17 +212,8 @@
 				DD5087152A04096300CFB8B0 /* StartModalEinhundertView.swift */,
 				DD50870E2A04096300CFB8B0 /* StartModalPferderennenView.swift */,
 				DD50870F2A04096300CFB8B0 /* VerliererModalBangView.swift */,
-				DD50870D2A04096300CFB8B0 /* WerbinichData.swift */,
 				DD5087192A04096300CFB8B0 /* WuerfelView.swift */,
 				DD5087122A04096300CFB8B0 /* ZuFruehModalBangView.swift */,
-				DDB8EC31277293D0006831F4 /* EherData.swift */,
-				DDB8EC1927728F8C006831F4 /* NochnieData.swift */,
-				DDB8EC22277290AA006831F4 /* PflichtData.swift */,
-				DDB8EC24277290AA006831F4 /* WahrheitData.swift */,
-				DDB8EC1727728F8C006831F4 /* IchhabnochnieJSON.json */,
-				DDB8EC25277290AA006831F4 /* PflichtJSON.json */,
-				DDB8EC27277290AA006831F4 /* WahrheitJSON.json */,
-				DDB8EC32277293D0006831F4 /* WerWuerdeEherJSON.json */,
 				DDB8EC0C27728CE0006831F4 /* Assets.xcassets */,
 				DDB8EC0E27728CE0006831F4 /* Preview Content */,
 			);
@@ -220,11 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDB8EC1327728CE0006831F4 /* Build configuration list for PBXNativeTarget "trinkspielplatz" */;
 			buildPhases = (
-				AD83B9BD44D9B48466F98A24 /* [CP] Check Pods Manifest.lock */,
+				49B18135246FF3BA969471E0 /* [CP] Check Pods Manifest.lock */,
 				DDB8EC0127728CDD006831F4 /* Sources */,
 				DDB8EC0227728CDD006831F4 /* Frameworks */,
 				DDB8EC0327728CDD006831F4 /* Resources */,
-				2A79F176480A6C61732FE623 /* [CP] Embed Pods Frameworks */,
+				7902BAB3A29ED4BB78E334F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,24 +311,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A79F176480A6C61732FE623 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD83B9BD44D9B48466F98A24 /* [CP] Check Pods Manifest.lock */ = {
+		49B18135246FF3BA969471E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,6 +331,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7902BAB3A29ED4BB78E334F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-trinkspielplatz/Pods-trinkspielplatz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -355,16 +370,13 @@
 				DD5087272A04096300CFB8B0 /* WuerfelView.swift in Sources */,
 				DD5087022A04060300CFB8B0 /* BannerAdView.swift in Sources */,
 				DD50871F2A04096300CFB8B0 /* KingsCupView.swift in Sources */,
-				DDB8EC2A277290AA006831F4 /* PflichtData.swift in Sources */,
 				DD5087232A04096300CFB8B0 /* StartModalEinhundertView.swift in Sources */,
 				DD3669532779F6DF001DAD9B /* BannerAd.swift in Sources */,
 				DD5086FE2A03CEEB00CFB8B0 /* Utils.swift in Sources */,
 				DD50871C2A04096300CFB8B0 /* StartModalPferderennenView.swift in Sources */,
 				DDD2BB51277A26FD00554FE5 /* AnleitungenView.swift in Sources */,
 				DDB8EC1B27728F8C006831F4 /* NochnieView.swift in Sources */,
-				DD50871B2A04096300CFB8B0 /* WerbinichData.swift in Sources */,
 				DD5087002A03CF1600CFB8B0 /* SocketService.swift in Sources */,
-				DDB8EC1E27728F8C006831F4 /* NochnieData.swift in Sources */,
 				DD5087212A04096300CFB8B0 /* MaexchenView.swift in Sources */,
 				DD50871D2A04096300CFB8B0 /* VerliererModalBangView.swift in Sources */,
 				DD5087222A04096300CFB8B0 /* BangView.swift in Sources */,
@@ -375,8 +387,8 @@
 				DD5087042A0406EA00CFB8B0 /* HoeherTieferView.swift in Sources */,
 				DDB8EC2E277290AA006831F4 /* WahrheitPflichtView.swift in Sources */,
 				DD50871E2A04096300CFB8B0 /* KartenView.swift in Sources */,
-				DDB8EC2C277290AA006831F4 /* WahrheitData.swift in Sources */,
-				DDB8EC35277293D0006831F4 /* EherData.swift in Sources */,
+				DD50B9EE2A05C65200E87B79 /* SFSafariViewWrapper.swift in Sources */,
+				DDB8EC35277293D0006831F4 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +514,7 @@
 		};
 		DDB8EC1427728CE0006831F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB605505787CFB48A3F21D3F /* Pods-trinkspielplatz.debug.xcconfig */;
+			baseConfigurationReference = 19C99F0C9FCB91D902F644C0 /* Pods-trinkspielplatz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,17 +527,19 @@
 				INFOPLIST_FILE = trinkspielplatz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Trinkspielplatz;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Charbel Chougourou";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.charbelchougourou.trinkspielplatz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -536,7 +550,7 @@
 		};
 		DDB8EC1527728CE0006831F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AE94D390DEC9FA17A6221F4 /* Pods-trinkspielplatz.release.xcconfig */;
+			baseConfigurationReference = 3DAC3E4F21ACB2FCBC88614C /* Pods-trinkspielplatz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -549,17 +563,19 @@
 				INFOPLIST_FILE = trinkspielplatz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Trinkspielplatz;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Charbel Chougourou";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.charbelchougourou.trinkspielplatz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

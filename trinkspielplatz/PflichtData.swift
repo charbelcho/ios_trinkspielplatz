@@ -7,6 +7,4 @@
 
 import Foundation
 
-struct PflichtData: Codable {
-    var text: String
-}
+
