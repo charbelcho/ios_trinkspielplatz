@@ -35,7 +35,7 @@ struct Anleitung: Identifiable {
         Die Spieler tragen sich beim Start ein und wetten ihre Schlucke auf eine Farbe. Die gewettete Schluckanzahl muss von dem Spieler selbst getrunken werden. Dann werden die Karten gezogen. Wenn ein Spieler eine Strafe bekommt, wird es in einer Meldung angezeigt.
         """)
     static let kingsCupAnleitung = Anleitung(name: """
-        Der Reihe um zieht jeder Spieler eine Karte und erfüllt die Aufgabe. Der Spieler der Captain Shithead ist, darf sich Regeln überlegen solange bis jemand anderes Captain Shithead ist.
+        Der Reihe um zieht jeder Spieler eine Karte und erfüllt die Aufgabe.
         """)
     static let werbinichAnleitung = Anleitung(name: """
         Du kannst eine Gruppe erstellen oder einer Gruppe beitreten. Um einer Gruppe beitreten, gib die Raum-ID einer Gruppe ein und bestätige. Wenn du der Ersteller einer Gruppe bist, kannst du auswählen, ob zufällig Personen für die Spieler zugeteilt werden oder die Spieler sich untereinander Personen zuteilen können. Danach kann der erste Spieler anfangen Ja-Nein-Fragen zu tellen, um seine zugeteilte Person zu erreaten. Wird eine Frage mit Ja beantwortet, kann der Spieler eine weitere Frage stellen. Wird eine Frage mit Nein beantwortet, trinkt der Spieler 2 Schlucke und der nächste Spieler ist an der Reihe.

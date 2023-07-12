@@ -167,7 +167,7 @@ struct KingsCupView: View {
             text = "Wer zuletzt den Boden berührt,\ntrinkt \(randomTrinkzahl) Schlucke\n"
         }
         else if random[n].value == 5 {
-            text = "Wer zuletzt den Boden Daumen auf den Tisch legt, trinkt \(randomTrinkzahl) Schlucke\n"
+            text = "Wer zuletzt den Daumen auf den Tisch legt, trinkt \(randomTrinkzahl) Schlucke\n"
         }
         else if random[n].value == 6 {
             text = "Alle Frauen trinken \(randomTrinkzahl) Schlucke\n\n"

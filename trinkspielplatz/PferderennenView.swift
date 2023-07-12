@@ -38,7 +38,6 @@ struct PferderennenView: View {
     @State var randomStapel: [Card] = DataLoader().pferderennenCardArray
     @State var randomVerdeckt: [Card] = DataLoader().pferderennenStartCardArray
     var array = DataLoader().pferderennenCardArray
-    @State var position0: Int = 0
     @State var position1: Int = 0
     @State var position2: Int = 0
     @State var position3: Int = 0
@@ -47,8 +46,8 @@ struct PferderennenView: View {
     @State var turnedArray: [Bool] = [
         false, false, false, false, false, false, false
     ]
-    @State var width: CGFloat = 0
-    @State var height: CGFloat = 0
+//    @State var width: CGFloat = 0
+//    @State var height: CGFloat = 0
     @State var isStartModalOpen: Bool = true
     @State var openAlert: Bool = false
     @State var alert: Int = 0
@@ -507,7 +506,6 @@ struct PferderennenView: View {
         randomStapel = array.shuffled()
         randomVerdeckt = Array(randomStapel[0..<7])
         randomStapel.removeFirst(7)
-        position0 = 0
         position1 = 0
         position2 = 0
         position3 = 0

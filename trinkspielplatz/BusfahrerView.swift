@@ -301,7 +301,6 @@ struct BusfahrerView: View {
                 })
             }
             
-            
             BannerAdView()
                 .hidden(service.openAlertBusfahrer && service.roomBusfahrer.phase != 2)
         }
